@@ -21,10 +21,9 @@ public class Aluno {
 		this.matricula = matricula;
 		this.notaGA = notaGA;
 		this.notaGB = notaGB;
-	
-
 		
 	}
+
 	
 		 // metodos de acesso Get -> busca e retorno
 		public String getNome() {
