@@ -5,10 +5,9 @@ public class Calculadora {
 	private String cor;
 	private int memoria;
 	
-	public Calculadora( String cor, int memoria) {
-		this.memoria = memoria;
-		memoria = 0;
-		
+	//Metodo construtor
+	public Calculadora( String cor) {
+		this.memoria = 0;		
 		this.cor = cor;
 	}
 	
@@ -48,17 +47,24 @@ public class Calculadora {
 	
 	public double divide( double v1, double v2) {
 		double resultadoDivide = v1 / v2;
+		
+		if(v2 ==0) {
+			System.out.println("Erro: divisão por zero");
+			return 0;
+		}
 		return resultadoDivide;
 	}
 	
 	//Metodos de potencia
 	public int elevaAoQuadrado( int v1) {
-		int resultadoQuadrado = (int) Math.pow(v1, 2);
+		//int resultadoQuadrado = (int) Math.pow(v1, 2);
+		int resultadoQuadrado = v1 * v1;
 		return resultadoQuadrado;
 	}
 	
 	public int elevaAoCubo( int v1) {
-		int resultadoCubo = (int) Math.pow(v1, 3);
+		//int resultadoCubo = (int) Math.pow(v1, 3);
+		int resultadoCubo = v1 * v1 *v1;
 		return resultadoCubo;
 	}
 	
