@@ -62,5 +62,12 @@ public class Calculadora {
 		return resultadoCubo;
 	}
 	
+	public void imprimeInfo() {
+		System.out.println("A Calculadora possui:\n"
+				+ "Cor: "+ getCor()+"\n"
+				+ "Memoria: "+ getMemoria()+ "\n"
+				);
+	}
+	
 	
 }
