@@ -1,6 +1,6 @@
 package aula005_testeGA.Ex02_Aquario;
 
-public class cor {
+public class Cor {
 	
 	/* 	Crie a classe Cor, sabendo que:
 		◦ uma cor possui um nome e 3 inteiros, chamados r, g e b; */
@@ -11,7 +11,7 @@ public class cor {
 	private int b;
 	
 	// ◦ quando uma cor é criada, todos os atributos devem ser inicializados;
-	public cor(String nome, int r, int g, int b) {
+	public Cor(String nome, int r, int g, int b) {
 		super();
 		this.nome = nome;
 		this.r = r;
