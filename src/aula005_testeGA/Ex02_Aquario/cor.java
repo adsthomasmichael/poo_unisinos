@@ -12,7 +12,7 @@ public class Cor {
 	
 	// ◦ quando uma cor é criada, todos os atributos devem ser inicializados;
 	public Cor(String nome, int r, int g, int b) {
-		super();
+		
 		this.nome = nome;
 		this.r = r;
 		this.g = g;

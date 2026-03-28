@@ -10,7 +10,7 @@ public class Peixe {
 		
 	// quando um peixe é criado, o nome, a cor e a raça devem ser informados;
 	public Peixe(String nome, Cor cor, String raca) {
-		super();
+		
 		this.nome = nome;
 		this.cor = cor;
 		this.raca = raca;
