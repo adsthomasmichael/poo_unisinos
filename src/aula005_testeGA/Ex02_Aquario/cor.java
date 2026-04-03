@@ -57,6 +57,6 @@ public class Cor {
 	
 	@Override
 	public String toString() {
-		return nome + "(" + r + "," + g + "," + b + ")";
+		return nome + " (" + r + ", " + g + ", " + b + ")";
 	}
 }

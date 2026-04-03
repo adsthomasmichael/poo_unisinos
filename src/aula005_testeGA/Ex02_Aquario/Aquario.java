@@ -11,8 +11,7 @@ public class Aquario {
 	private Peixe peixe03;
 	
 	/* crie os seguintes construtores:
-		▪ um que não recebe parâmetros e inicializa o tamanho com valor -1. */
-	
+		▪ um que não recebe parâmetros e inicializa o tamanho com valor -1. */	
 	public Aquario() {
 		this.tamanho = -1;
 	}
@@ -84,14 +83,23 @@ public class Aquario {
 			}
 		
 		if (contaPeixe == 1) {
-			return "O Aquario possui de tamanho " + tamanho + "possui " + contaPeixe + " peixe: " + peixe01 + ".";
+			return "O Aquario possui de tamanho " + tamanho + "m² e possui " + contaPeixe + " peixe: " + peixe01 + ".";
 		}
 		if (contaPeixe == 2) {
-			return "O Aquario possui de tamanho " + tamanho + "possui " + contaPeixe + " peixes: " + peixe01 + ".\n" + peixe02 + ".";
+			return "O Aquario possui de tamanho " + tamanho + "m² e possui " + contaPeixe + " peixes: " + peixe01 + ".\n" + peixe02 + ".";
 		}
 		else {
-			return "O Aquario possui de tamanho " + tamanho + "possui " + contaPeixe + " peixes: " + peixe01 + ". \n" + peixe02 + ". \n" + peixe03 + ".";
+			return "O Aquario possui de tamanho " + tamanho + "m² e possui " + contaPeixe + " peixes: " + peixe01 + ". \n" + peixe02 + ". \n" + peixe03 + ".";
 		}
+		
+		/* versão reduzida 
+	@Override
+	public String toString() {
+    return "Aquario [tamanho=" + tamanho +
+           ", peixe01=" + peixe01 +
+           ", peixe02=" + peixe02 +
+           ", peixe03=" + peixe03 + "]";
+	} 	*/
 		
 	}
 	
@@ -102,8 +110,7 @@ public class Aquario {
 	public boolean tamanhoSuficiente() {
 		
 		int qtdPeixes = 0;
-		int suficiente = qtdPeixes * 3;
-			
+					
 			if ( peixe01 != null) {
 				qtdPeixes++;
 			}
@@ -114,12 +121,28 @@ public class Aquario {
 				qtdPeixes++;
 			}	
 		
-		if( suficiente < tamanho ) {
-			return false;
-		}
-		else {
+		int suficiente = qtdPeixes * 3;
+			
+			if( suficiente <= tamanho ) {
 			return true;
 		}
+		else {
+			return false;
+		}
+			
+			/* modo reduzido
+	public boolean tamanhoSuficiente() {
+
+    int qtdPeixes = 0;
+
+	    if (peixe01 != null) qtdPeixes++;
+	    if (peixe02 != null) qtdPeixes++;
+	    if (peixe03 != null) qtdPeixes++;
+
+    double necessario = qtdPeixes * 3;
+
+    return tamanho >= necessario;
+	} */
 				
 	}
 	
@@ -127,20 +150,14 @@ public class Aquario {
 	
 	public void imprimeCores() {
 		
-		if(getPeixe03() != null) {
-			System.out.println("A cor dos peixes são: \n"
-					+ getPeixe01().getNome()+": "+ getPeixe01().getCor() + ".\n"
-					+ getPeixe02().getNome()+": "+ getPeixe02().getCor() + ".\n"
-					+ getPeixe03().getNome()+": "+ getPeixe03().getCor() + ".");
+		if(getPeixe01() != null) {
+			System.out.println( peixe01.getNome()+": "+ peixe01.getCor() + ".");
 		}
 		if(getPeixe02() != null) {
-			System.out.println("A cor dos peixes são: \n"
-					+ getPeixe01().getNome()+": "+ getPeixe01().getCor() + ".\n"
-					+ getPeixe02().getNome()+": "+ getPeixe02().getCor() + ".");
+			System.out.println(peixe02.getNome()+": "+ peixe02.getCor() + ".");
 		}
-		if(getPeixe01() != null) {
-			System.out.println("A cor dos peixes são: \n"
-					+ getPeixe01().getNome()+": "+ getPeixe01().getCor() + ".");
+		if(getPeixe03() != null) {
+			System.out.println(peixe03.getNome()+": "+ peixe03.getCor() + ".");
 		}
 		else {
 			System.out.println("Não tem peixe no aquario.");

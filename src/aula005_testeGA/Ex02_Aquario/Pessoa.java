@@ -34,6 +34,12 @@ public class Pessoa {
 	public String toString() {
 		return nome + " possui " + aquario + ".";
 	}
+	
+	/* versão de padrão mercado
+	@Override
+	public String toString() {
+    	return "Pessoa [nome=" + nome + ", aquario=" + aquario + "]";
+}*/
 
 
 }
