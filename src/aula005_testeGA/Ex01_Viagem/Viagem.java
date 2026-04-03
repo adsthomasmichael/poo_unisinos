@@ -1,4 +1,4 @@
-package aula005_testeGA.Ex02_Aquario.Ex01_Viagem;
+package aula005_testeGA.Ex01_Viagem;
 
 public class Viagem {
 	/* 	Crie uma classe chamada Viagem. Uma viagem possui uma cidade destino, um estado
