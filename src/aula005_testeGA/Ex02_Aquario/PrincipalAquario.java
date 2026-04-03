@@ -29,6 +29,25 @@ public class PrincipalAquario {
 	pessoa01.getAquario().setPeixe02(peixe02);
 	
 	
+		/* imprima uma mensagem informando se o aquário possui tamanho suficiente para os peixes existentes;*/
+	
+	if( !aquario01.tamanhoSuficiente()) {
+		System.out.println("O Aquario é INSUFICIENTE para os peixes existentes.");
+	}
+	else {
+		System.out.println("O aquario é SUFICIENTE para a quantidade de peixes existentes.");
+	}
+	
+	
+		// altere a raça do Peixe 2 para a raça informada pelo usuário através da utilização da classe Teclado;
+	peixe02.setRaca(Teclado.leString("Altere aqui a raça do peixe 2: "));
+
+	
+		//imprima as informações das cores dos peixes que estão no aquário da pessoa.
+	System.out.printf("As cores dos peixes do aquario do(a) %s, são: \n", pessoa01.getNome());
+	pessoa01.getAquario().imprimeCores();
+	
+	
 	}
 
 }

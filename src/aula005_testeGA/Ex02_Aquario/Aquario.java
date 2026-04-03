@@ -159,9 +159,9 @@ public class Aquario {
 		if(getPeixe03() != null) {
 			System.out.println(peixe03.getNome()+": "+ peixe03.getCor() + ".");
 		}
-		else {
-			System.out.println("Não tem peixe no aquario.");
-		}
+		if (peixe01 == null && peixe02 == null && peixe03 == null) {
+	        System.out.println("Não tem peixe no aquario.");
+	    }
 				
 	}
 	
