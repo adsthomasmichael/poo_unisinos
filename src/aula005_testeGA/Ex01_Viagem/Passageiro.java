@@ -28,7 +28,7 @@ public class Passageiro {
 	}
 	
 	public void imprimeInfo() {
-		System.out.println("Informações do passageiro: ");
+		System.out.println("Passageiro: ");
 		System.out.println("Nome: "+ getNome());
 		System.out.println("Idade: "+ getIdade());
 	}
