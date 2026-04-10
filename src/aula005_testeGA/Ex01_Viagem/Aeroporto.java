@@ -74,7 +74,11 @@ public class Aeroporto {
 	    this.valorTotalArrecadado += valorFinal;
 
 	    // 6. Cria e retorna a passagem
-	    return new Passagem(viagem, passageiro, valorFinal);
+	    
+	    Passagem passagem = new Passagem(viagem, passageiro, valorFinal);
+	    return passagem;
+	    //return new Passagem(viagem, passageiro, valorFinal);
+	    
 	}
 	
 }
