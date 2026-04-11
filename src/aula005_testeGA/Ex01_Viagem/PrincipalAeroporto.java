@@ -14,7 +14,7 @@ public class PrincipalAeroporto {
 	Aeroporto aeroporto01 = new Aeroporto(Teclado.leString("Informe o nome do Aeroporto: "));
 	Viagem viagem01 = new Viagem("Florianopolis", "Santa Catarina", 500.00, 5);
 	
-	Passageiro passageiro01 = new Passageiro("Luis Eduardo", 16);
+	Passageiro passageiro01 = new Passageiro("Luis Eduardo", 10);
 	Passageiro passageiro02 = new Passageiro("Michael Thomas", 42);
 	Passageiro passageiro03 = new Passageiro("Tatiani Jardim", 51);
 	Passageiro passageiro04 = new Passageiro("Luiz Donaldo", 83);
@@ -28,6 +28,8 @@ public class PrincipalAeroporto {
 		if (aeroporto01.compraPassagem(passageiro01, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro01.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
@@ -35,6 +37,8 @@ public class PrincipalAeroporto {
 		if(aeroporto01.compraPassagem(passageiro02, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro02.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
@@ -42,6 +46,8 @@ public class PrincipalAeroporto {
 		if(aeroporto01.compraPassagem(passageiro03, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro03.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
@@ -49,6 +55,8 @@ public class PrincipalAeroporto {
 		if(aeroporto01.compraPassagem(passageiro04, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro04.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
@@ -56,6 +64,8 @@ public class PrincipalAeroporto {
 		if(aeroporto01.compraPassagem(passageiro05, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro05.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
@@ -63,6 +73,8 @@ public class PrincipalAeroporto {
 		if(aeroporto01.compraPassagem(passageiro06, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro06.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
@@ -71,6 +83,8 @@ public class PrincipalAeroporto {
 		if(aeroporto01.compraPassagem(passageiro07, viagem01) != null) {
 			contador++;
 			System.out.println("Compra realizada com sucesso!\n");
+			passageiro07.imprimeInfo();
+			viagem01.imprimeInfo();
 		}
 		else {
 			System.out.println("Não foi possivel realizar a compra da sua passagem.");
