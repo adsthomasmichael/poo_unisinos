@@ -39,9 +39,9 @@ public class Passagem {
 	}
 
 	public void imprimeInfo() {
-		System.out.println("Passagem: ");
+		System.out.println("Dados da passagem: ");
 		getPassageiro().imprimeInfo();;
 		getViagem().imprimeInfo();;
-		System.out.println("Valor passagem: "+getValorPassagem());
+		System.out.printf("Valor passagem: %.2f \n",getValorPassagem());
 	}
 }

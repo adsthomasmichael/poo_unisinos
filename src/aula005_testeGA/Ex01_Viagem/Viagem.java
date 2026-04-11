@@ -60,7 +60,7 @@ public class Viagem {
 		System.out.println("Dados da viagem: ");
 		System.out.println("Cidade destino: "+ getCidadeDestino());
 		System.out.println("Estado destino: "+ getEstadoDestino());
-		System.out.println("Preço: "+ getPreco());
+		System.out.printf("Preço: %.2f \n", getPreco());
 		System.out.println("Qtd de lugares vendidos: "+ getLugaresVendidos());
 		System.out.println("Qtd máxima de lugares: "+ getQtdMaxLugares());
 	}

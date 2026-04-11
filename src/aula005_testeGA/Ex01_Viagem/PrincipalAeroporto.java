@@ -14,6 +14,33 @@ public class PrincipalAeroporto {
 	Aeroporto aeroporto01 = new Aeroporto(Teclado.leString("Informe o nome do Aeroporto: "));
 	Viagem viagem01 = new Viagem("Florianopolis", "Santa Catarina", 500.00, 5);
 	
+	// 3. Criando passageiros em um array
+    Passageiro[] passageiros = {
+            new Passageiro("Luis Eduardo", 10),
+            new Passageiro("Michael Thomas", 42),
+            new Passageiro("Tatiani Jardim", 51),
+            new Passageiro("Luiz Donaldo", 83),
+            new Passageiro("D'Ale", 9),
+            new Passageiro("Angola", 4),
+            new Passageiro("Zeca Pagodinho", 74)
+    };
+
+    // 4. Tentando comprar 7 passagens
+    /* for (int i = 0; i < passageiros.length; i++) {
+    Passageiro p = passageiros[i]; */
+
+    for (Passageiro p : passageiros) { //Laço for each
+
+        Passagem passagem = aeroporto01.compraPassagem(p, viagem01);
+
+        if (passagem != null) {
+            System.out.println("\nCompra realizada com sucesso!");
+            passagem.imprimeInfo();
+        } else {
+            System.out.println("\nNão foi possível realizar a compra da passagem.");
+        }
+    }
+	/*
 	Passageiro passageiro01 = new Passageiro("Luis Eduardo", 10);
 	Passageiro passageiro02 = new Passageiro("Michael Thomas", 42);
 	Passageiro passageiro03 = new Passageiro("Tatiani Jardim", 51);
@@ -95,8 +122,9 @@ public class PrincipalAeroporto {
 	
 	
 	
+	} 
+	*/
+	
+    
 	}
-	
-	
-
 }
