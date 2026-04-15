@@ -59,7 +59,7 @@ public class Contrato {
 	
 	public double calcularTotal() {
 		double calculaTotal = getDiasLocacao() * veiculo.getPrecoDiaria();
-		return calcularTotal();
+		return calculaTotal;
 	}
 	
 	
