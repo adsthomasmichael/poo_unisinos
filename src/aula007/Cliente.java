@@ -5,7 +5,7 @@ public class Cliente {
 	private String nome;
 	private int cnh;
 	private int idade;
-	private boolean experiente;
+	private boolean experiente;//(motorista com CNH há mais de 10 anos é um motorista experiente).
 	
 	public Cliente(String nome, int cnh, int idade) {
 		super();

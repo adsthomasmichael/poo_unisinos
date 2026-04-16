@@ -7,11 +7,12 @@ public class Contrato {
 	private int diasLocacao;
 	private double valorEfetivoPago;
 	
-	public Contrato(Veiculo veiculo, Cliente cliente, int diasLocacao) {
+	public Contrato(Veiculo veiculo, Cliente cliente, int diasLocacao, double valorEfetivoPago) {
 		super();
 		this.veiculo = veiculo;
 		this.cliente = cliente;
 		this.diasLocacao = diasLocacao;
+		this.valorEfetivoPago = valorEfetivoPago;
 	}
 
 	public Veiculo getVeiculo() {
