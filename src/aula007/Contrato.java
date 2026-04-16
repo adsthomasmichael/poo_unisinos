@@ -7,8 +7,9 @@ public class Contrato {
 	private int diasLocacao;
 	private double valorEfetivoPago;
 	
-	public Contrato(Veiculo veiculo, Cliente cliente, int diasLocacao, double valorEfetivoPago) {
-		super();
+	public Contrato() {}//Metodo construtor padrão
+	
+	public Contrato(Veiculo veiculo, Cliente cliente, int diasLocacao, double valorEfetivoPago) { //metodo construtor completo
 		this.veiculo = veiculo;
 		this.cliente = cliente;
 		this.diasLocacao = diasLocacao;
@@ -47,6 +48,11 @@ public class Contrato {
 		this.valorEfetivoPago = valorEfetivoPago;
 	}
 	
+	public double calcularTotal() {
+		double calculaTotal = getDiasLocacao() * veiculo.getPrecoDiaria();
+		return calculaTotal;
+	}
+	
 	public void exibirInformacoes() {
 		System.out.println("Dados do contrato: \n");
 		cliente.exibirInformacoes();
@@ -54,14 +60,12 @@ public class Contrato {
 		veiculo.exibirInformacoes();
 		System.out.println();
 		System.out.println("Dias locaçao: "+getDiasLocacao());
-		System.out.println("Valor efetivo pago: "+getValorEfetivoPago());
+		System.out.printf("Valor efetivo pago: %.2f\n", getValorEfetivoPago());
+		System.out.printf("Total          : R$ %.2f%n", calcularTotal());
 		
 	}
 	
-	public double calcularTotal() {
-		double calculaTotal = getDiasLocacao() * veiculo.getPrecoDiaria();
-		return calculaTotal;
-	}
+	
 	
 	
 

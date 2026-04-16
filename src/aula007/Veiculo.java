@@ -3,15 +3,15 @@ package aula007;
 public class Veiculo {
 	
 	private String modelo;
-	private int placa;
+	private String placa;
 	private double precoDiaria;
-	private boolean indDisponibilidade;
+	private boolean disponibilidade;
 
-	public Veiculo(String modelo, int placa, double precoDiaria) {
+	public Veiculo(String modelo, String placa, double precoDiaria) {
 		this.modelo = modelo;
 		this.placa = placa;
 		this.precoDiaria = precoDiaria;
-		this.indDisponibilidade = true;
+		this.disponibilidade = true;
 		
 	
 		
@@ -25,11 +25,11 @@ public class Veiculo {
 		this.modelo = modelo;
 	}
 
-	public int getPlaca() {
+	public String getPlaca() {
 		return placa;
 	}
 
-	public void setPlaca(int placa) {
+	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
 
@@ -41,20 +41,20 @@ public class Veiculo {
 		this.precoDiaria = precoDiaria;
 	}
 
-	public boolean isIndDisponibilidade() {
-		return indDisponibilidade;
+	public boolean isDisponibilidade() {
+		return disponibilidade;
 	}
 
-	public void setIndDisponibilidade(boolean indDisponibilidade) {
-		this.indDisponibilidade = indDisponibilidade;
+	public void setDisponibilidade(boolean disponibilidade) {
+		this.disponibilidade = disponibilidade;
 	}
 	
 	public void exibirInformacoes() {
-		System.out.println("Dados do carro: \n");
+		System.out.println("Dados do veículo: \n");
 		System.out.println("Modelo: "+ getModelo());
 		System.out.println("Placa: "+ getPlaca()+"\n");
-		System.out.println("Preço diaário: %.2f"+ getPrecoDiaria());
-		System.out.println("Disponível: "+ isIndDisponibilidade());
+		System.out.printf("Preço diário: %.2f\n", getPrecoDiaria());
+		System.out.println("Disponível: "+ isDisponibilidade());
 	}
 	
 }

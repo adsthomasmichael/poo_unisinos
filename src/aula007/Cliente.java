@@ -8,7 +8,7 @@ public class Cliente {
 	private boolean experiente;//(motorista com CNH há mais de 10 anos é um motorista experiente).
 	
 	public Cliente(String nome, int cnh, int idade) {
-		super();
+		
 		this.nome = nome;
 		this.cnh = cnh;
 		this.idade = idade;
