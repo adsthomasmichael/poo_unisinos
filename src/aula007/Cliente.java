@@ -7,11 +7,14 @@ public class Cliente {
 	private int idade;
 	private boolean experiente;//(motorista com CNH há mais de 10 anos é um motorista experiente).
 	
-	public Cliente(String nome, int cnh, int idade) {
+	public Cliente() {} //construtor padrao
+	
+	public Cliente(String nome, int cnh, int idade, boolean experiente) {
 		
 		this.nome = nome;
 		this.cnh = cnh;
 		this.idade = idade;
+		this.experiente = experiente;
 	}
 
 	public String getNome() {
@@ -47,10 +50,10 @@ public class Cliente {
 	}
 	
 	public void exibirInformacoes() {
-		System.out.println("Dados do cliente: \n");
-		System.out.println("Nome: "+getNome());
-		System.out.println("Idade: "+getIdade());
-		System.out.println("CNH: "+getCnh());
+		System.out.println("=== Cliente ===");
+		System.out.println("Nome        : "+getNome());
+		System.out.println("Idade       : "+getIdade());
+		System.out.println("CNH         : "+getCnh());
 		System.out.println("É experiente: "+isExperiente());
 		
 	}

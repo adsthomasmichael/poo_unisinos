@@ -49,19 +49,19 @@ public class Contrato {
 	}
 	
 	public double calcularTotal() {
-		double calculaTotal = getDiasLocacao() * veiculo.getPrecoDiaria();
+		double calculaTotal = getDiasLocacao() * getValorEfetivoPago();
 		return calculaTotal;
 	}
 	
 	public void exibirInformacoes() {
-		System.out.println("Dados do contrato: \n");
+		System.out.println("*** CONTRATO ***\n");
 		cliente.exibirInformacoes();
 		System.out.println();
 		veiculo.exibirInformacoes();
-		System.out.println();
-		System.out.println("Dias locaçao: "+getDiasLocacao());
+		System.out.println("Dias locaçao      : "+getDiasLocacao());
 		System.out.printf("Valor efetivo pago: %.2f\n", getValorEfetivoPago());
-		System.out.printf("Total          : R$ %.2f%n", calcularTotal());
+		System.out.printf("Total             : R$ %.2f%n", calcularTotal());
+		System.out.println();
 		
 	}
 	

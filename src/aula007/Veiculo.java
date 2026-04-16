@@ -50,11 +50,11 @@ public class Veiculo {
 	}
 	
 	public void exibirInformacoes() {
-		System.out.println("Dados do veículo: \n");
-		System.out.println("Modelo: "+ getModelo());
-		System.out.println("Placa: "+ getPlaca()+"\n");
-		System.out.printf("Preço diário: %.2f\n", getPrecoDiaria());
-		System.out.println("Disponível: "+ isDisponibilidade());
+		System.out.println("=== Veículo ===");
+		System.out.println("Modelo      : "+ getModelo());
+		System.out.println("Placa       : "+ getPlaca());
+		System.out.printf("Preço diário: %.2f", getPrecoDiaria());
+		System.out.println("\nDisponível  : "+ isDisponibilidade());
 	}
 	
 }

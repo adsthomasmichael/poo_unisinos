@@ -33,8 +33,8 @@ public class Locadora {
 	 /* O método recebe um objeto do tipo Cliente e um objeto do tipo Veiculo por parâmetro, simulando que o cliente vai alugar aquele veículo. 
 	 * O método retorna	um objeto do tipo Contrato, de acordo com as seguintes regras: */
 		
-	public Contrato alugarVeiculo(Cliente contrato, Veiculo veiculo) { 
-		return alugarVeiculo(contrato, veiculo, 1);
+	public Contrato alugarVeiculo(Cliente cliente, Veiculo veiculo) { 
+		return alugarVeiculo(cliente, veiculo, 1);
 		
 		
 		
@@ -81,6 +81,13 @@ public class Locadora {
 		return new Contrato(v, c, qtdDias, vlrTotal);		
 		
 	}
+	
+	public void exibirInformacoes() {
+        System.out.println("=== Locadora ===");
+        System.out.println("Nome              : " + nome);
+        System.out.printf ("Total arrecadado  : R$ %.2f%n", vlrTotalArrecadado);
+    }
+
 	
 
 }
