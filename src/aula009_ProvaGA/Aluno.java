@@ -37,11 +37,13 @@ public class Aluno {
 	}
 
 	public double getCoeficienteRend() {
-		return coeficienteRend;
+		return coeficienteRend;	
 	}
 
 	public void setCoeficienteRend(double coeficienteRend) {
-		this.coeficienteRend = coeficienteRend;
+		if(coeficienteRend >= 0.0 && coeficienteRend <= 10.0) {
+			this.coeficienteRend = coeficienteRend;
+		}
 	}
 	
 	public void exibirInformacoes() {
