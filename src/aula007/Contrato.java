@@ -59,7 +59,7 @@ public class Contrato {
 		System.out.println();
 		veiculo.exibirInformacoes();
 		System.out.println("Dias locaçao      : "+getDiasLocacao());
-		System.out.printf("Valor efetivo pago: %.2f\n", getValorEfetivoPago());
+		System.out.printf("Valor efetivo pago: R$ %.2f\n", getValorEfetivoPago());
 		System.out.printf("Total             : R$ %.2f%n", calcularTotal());
 		System.out.println();
 		

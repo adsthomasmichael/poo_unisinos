@@ -41,7 +41,7 @@ public class Livro {
 		System.out.println("=== Livro ===");
 		System.out.println("Nome      			 : "+ getNome());
 		System.out.println("Qtd exemplares       : "+ getQtdExemplar());
-		System.out.println("\nDisponível  : "+ isDisponibilidade());
+		System.out.println("Disponível  : \n"+ isDisponibilidade());
 	}
 	
 	

@@ -53,7 +53,7 @@ public class Veiculo {
 		System.out.println("=== Veículo ===");
 		System.out.println("Modelo      : "+ getModelo());
 		System.out.println("Placa       : "+ getPlaca());
-		System.out.printf("Preço diário: %.2f", getPrecoDiaria());
+		System.out.printf("Preço diário: R$ %.2f", getPrecoDiaria());
 		System.out.println("\nDisponível  : "+ isDisponibilidade());
 	}
 	

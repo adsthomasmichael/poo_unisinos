@@ -67,7 +67,7 @@ public class Locadora {
 			vlrdiaria *= 0.85;
 		}
 		else{ /*demais clientes pagam o valor integral da diária, exceto quando o veículo for um SUV ou pickup (categorias premium), cujo valor é acrescido de 10%.*/
-			String modelo = v.getModelo().toLowerCase();
+			
 			if(v.getModelo().contains("SUV") || v.getModelo().contains("Pickup")) {
 				vlrdiaria *= 1.10;				
 			}
