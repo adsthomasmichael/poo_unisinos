@@ -18,6 +18,12 @@ public class Inscricao {
 		setModalidade(modalidade);
 	}
 
+	public Inscricao(Disciplina disciplina, Aluno aluno) {
+		this.disciplina = disciplina;
+		this.aluno = aluno;
+		setModalidade(modalidade);
+	}
+
 	public Disciplina getDisciplina() {
 		return disciplina;
 	}
