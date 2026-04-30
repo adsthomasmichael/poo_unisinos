@@ -10,7 +10,9 @@ public class PrincipalUniversidade {
 		/* Crie uma classe PrincipalUniversidade. Nesta classe, crie o método main. No main, faça o que se pede:
 		 * crie uma universidade, com o nome informado pelo Teclado; */
 		
-		Universidade u1 = new Universidade(Teclado.leString("Informe o nome da Universidade: "));
+		Universidade u1 = new Universidade(
+				Teclado.leString("Informe o nome da Universidade: ")
+		);
 		
 		// crie duas disciplinas, uma introdutória e outra avançada, com 4 e 5 vagas, respectivamente
 		Disciplina d1 = new Disciplina("INF101", 4);
@@ -42,29 +44,39 @@ public class PrincipalUniversidade {
 				new Aluno("Vande Bigode", "1234564", 7.1),				
 		};
 		
-		if( Aluno a : alunos) {
-			if(d1.getQtdMaximaVagas() > d1.getQtdVagasPreenchidas()) {
-				u1.realizarInscricao(a, d1);
-				System.out.println("Inscrição realizada com sucesso!");
+		System.out.println("\n=== INSCRIÇÕES EM INF101 ===\n");
+		
+		for( Aluno a : alunos) {
+			Inscricao i = u1.realizarInscricao(a, d1);
+				
+			if ( i != null) {
+				i.exibirInformacoes();
 			}
 			else {
-					System.out.println("ERRRRRRRRO!");
+				System.out.println("Falha na inscrição do aluno "+ a.getNome());
 			}
+			
+			System.out.println("-------------------------");
 		}
 	
-		if( Aluno a : alunos) {
-			if(d2.getQtdMaximaVagas() > d2.getQtdVagasPreenchidas()) {
-				u1.realizarInscricao(a, d2);
-				System.out.println("Inscrição realizada com sucesso!");
+		
+		System.out.println("\n=== INSCRIÇÕES EM ALG201  ===\n");
+		
+		for( Aluno a : alunos) {
+			Inscricao i = u1.realizarInscricao(a, d2);
+				
+			if ( i != null) {
+				i.exibirInformacoes();
 			}
 			else {
-					System.out.println("ERRRRRRRRO!");
+				System.out.println("Falha na inscrição do aluno "+ a.getNome());
 			}
+			
+			System.out.println("-------------------------");
 		}
 	
-	
-	
-	
+		System.out.println("\nTotal de inscrições: " + u1.getTotalInscricoes());
+		
 	}
 
 }
