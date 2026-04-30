@@ -13,7 +13,7 @@ public class Aluno {
 	public Aluno(String nome, String matricula, double coeficienteRend) {
 		setNome(nome);
 		setMatricula(matricula);
-		this.coeficienteRend = coeficienteRend;
+		setCoeficienteRend(coeficienteRend);
 	}
 
 	public String getNome() {
@@ -21,7 +21,7 @@ public class Aluno {
 	}
 
 	public void setNome(String nome) {
-		if( nome != null && nome.trim().isEmpty()) {
+		if( nome != null && !nome.trim().isEmpty()) {
 			this.nome = nome;
 		}
 	}
@@ -31,7 +31,7 @@ public class Aluno {
 	}
 
 	public void setMatricula(String matricula) {
-		if( matricula != null && matricula.trim().isEmpty()) {
+		if( matricula != null && !matricula.trim().isEmpty()) {
 			this.matricula = matricula;
 		}
 	}
@@ -43,6 +43,9 @@ public class Aluno {
 	public void setCoeficienteRend(double coeficienteRend) {
 		if(coeficienteRend >= 0.0 && coeficienteRend <= 10.0) {
 			this.coeficienteRend = coeficienteRend;
+		}
+		else {
+			this.coeficienteRend = 0.0;
 		}
 	}
 	

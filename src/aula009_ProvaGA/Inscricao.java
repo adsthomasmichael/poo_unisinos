@@ -13,14 +13,10 @@ public class Inscricao {
 	private String modalidade;
 	
 	public Inscricao(Disciplina disciplina, Aluno aluno, String modalidade) {
-		this.disciplina = disciplina;
-		this.aluno = aluno;
-		setModalidade(modalidade);
-	}
-
-	public Inscricao(Disciplina disciplina, Aluno aluno) {
-		this.disciplina = disciplina;
-		this.aluno = aluno;
+		if (disciplina != null && aluno != null) {
+            this.disciplina = disciplina;
+            this.aluno = aluno;
+		}
 		setModalidade(modalidade);
 	}
 
@@ -29,7 +25,9 @@ public class Inscricao {
 	}
 
 	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+		if (disciplina != null) {
+            this.disciplina = disciplina;
+        }
 	}
 
 	public Aluno getAluno() {
@@ -37,7 +35,9 @@ public class Inscricao {
 	}
 
 	public void setAluno(Aluno aluno) {
-		this.aluno = aluno;
+		if( aluno != null) {
+			this.aluno = aluno;
+		}
 	}
 
 	public String getModalidade() {
@@ -45,15 +45,15 @@ public class Inscricao {
 	}
 
 	public void setModalidade(String modalidade) {
-		if( modalidade != null && modalidade.strip().isEmpty()) {
-			this.modalidade = modalidade;
-		}
+		if (modalidade != null && !modalidade.trim().isEmpty()) {
+            this.modalidade = modalidade;
+        }
 	}
 	
 	public void exibirInformacoes() {
 		System.out.println("=== INSCRIÇÃO ===\n");
-		System.out.println("Disciplina: "+ getDisciplina());
-		System.out.println("Aluno     : "+ getAluno());
+		System.out.println("Disciplina: "+ disciplina.getCodigo());
+		System.out.println("Aluno     : "+ aluno.getNome());
 		System.out.println("Modalidade: "+ getModalidade());
 	}
 	

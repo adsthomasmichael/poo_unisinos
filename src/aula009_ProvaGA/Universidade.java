@@ -19,7 +19,7 @@ public class Universidade {
 	}
 
 	public void setNome(String nome) {
-		if(nome != null && nome.trim().isEmpty()) {
+		if(nome != null && !nome.trim().isEmpty()) {
 			this.nome = nome;
 		}
 	}
@@ -39,50 +39,58 @@ public class Universidade {
 		inscrever naquela disciplina. O método retorna um objeto do tipo Inscricao, de acordo com o que segue: */
 	
 	public Inscricao realizarInscricao(Aluno aluno, Disciplina disciplina) {
-		int contaVagas = 0;
-		Inscricao inscricao = new Inscricao(disciplina, aluno);
 		
-			/*a inscrição só pode ser realizada se ainda houver vagas na disciplina. Caso contrário, retorne null; */
-			if(disciplina.getQtdMaximaVagas() <= 0) return null;
-			
-			/* 	alunos com coeficiente de rendimento abaixo de 4.0 são inscritos na modalidade “Especial” e só
+		if( aluno == null || disciplina == null) return null;
+		
+		/*a inscrição só pode ser realizada se ainda houver vagas na disciplina. Caso contrário, retorne null; */
+		if(disciplina.getQtdMaximaVagas() < disciplina.getQtdVagasPreenchidas()) {
+			System.out.println("Erro. Não ha vagas disponiveis.");
+			return null;
+		}
+		
+		/*  	alunos com coeficiente de rendimento abaixo de 4.0 são inscritos na modalidade “Especial” e só
 				podem se inscrever em disciplinas cujo código comece com a letra “I” (disciplina introdutórias).
 				Caso a disciplina não seja introdutória, retorne null e imprima uma mensagem explicando o
 				motivo; */
 		
-			if( aluno.getCoeficienteRend() < 4.0) {
-				inscricao.setModalidade("Especial");
-				contaVagas++;
-				if (!disciplina.getCodigo().startsWith("I")) {
-					System.out.println("Erro! Você não pode se inscrever nesta disciplina. Inscreva-se em uma disciplina introdutória.");
-					return null;
-				}
-			}
-			
-			/* 	alunos com coeficiente entre 4.0 (inclusive) e 6.0 (exclusive) são inscritos na modalidade “Ouvinte”
-				– podem assistir as aulas, mas não recebem créditos; */
-			if( aluno.getCoeficienteRend()>= 4.0 && aluno.getCoeficienteRend() < 6.0) {
-				inscricao.setModalidade("Ouvinte");
-				contaVagas++;
-			}
-			
-			/* alunos com coeficiente entre 6.0 (inclusive) e 8.0 (exclusive) são inscritos na modalidade “Regular”; */
-			if (aluno.getCoeficienteRend() >= 6.0 && aluno.getCoeficienteRend() < 8.0) {
-				inscricao.setModalidade("Regular");
-				contaVagas++;
-			}
-			//alunos com coeficiente de 8.0 ou acima são inscritos na modalidade “Regular com distinção”
-			if (aluno.getCoeficienteRend() >= 8.0) {
-				inscricao.setModalidade("Regular com distinção");
-				contaVagas++;
-			}
+		String modalidade;
 		
-		disciplina.setQtdVagasPreenchidas(contaVagas);
+		// 2. Definir modalidade
+		double coef = aluno.getCoeficienteRend();
+		
+		if( coef < 4.0) {
+			// Regra especial
+			if(!disciplina.getCodigo().startsWith("I")) {
+				System.out.println("Erro. Aluno com baixo rendimento pode somente se inscrever em disciplinas introdutorias.");
+				return null;
+			}
+			modalidade = "Especial";
+		}
+		//alunos com coeficiente entre 4.0 (inclusive) e 6.0 (exclusive) são inscritos na modalidade “Ouvinte” - podem assistir as aulas, mas não recebem créditos;
+		
+		else if( coef < 6.0) {
+			modalidade = "Ouvinte";
+		}
+		// alunos com coeficiente entre 6.0 (inclusive) e 8.0 (exclusive) são inscritos na modalidade “Regular”;
+		else if( coef < 8.0) {
+			modalidade = "Regular";
+		}
+		//alunos com coeficiente de 8.0 ou acima são inscritos na modalidade “Regular com distinção”
+		else {
+			modalidade = "Regular com distinção";
+		}
+		
+		// criar inscrição
+		Inscricao inscricao = new Inscricao(disciplina, aluno, modalidade);
+		
+		// Atualizando vagas da discilina		
+		disciplina.setQtdVagasPreenchidas(disciplina.getQtdVagasPreenchidas() + 1);
+		
+		//Atualizando Universidade
+		totalInscricoes++;
+		
 		return inscricao;
 	
-	}
-		
-		
-	
+	}	
 	
 }

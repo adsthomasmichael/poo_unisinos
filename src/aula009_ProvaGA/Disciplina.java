@@ -23,7 +23,7 @@ public class Disciplina {
 	}
 
 	public void setCodigo(String codigo) {
-		if( codigo != null && codigo.trim().isEmpty()) {
+		if( codigo != null && !codigo.trim().isEmpty()) {
 			this.codigo = codigo;
 		}
 	}
@@ -33,7 +33,9 @@ public class Disciplina {
 	}
 
 	public void setQtdMaximaVagas(int qtdMaximaVagas) {
-		this.qtdMaximaVagas = qtdMaximaVagas;
+		if(qtdMaximaVagas > 0) {
+			this.qtdMaximaVagas = qtdMaximaVagas;
+		}
 	}
 
 	public int getQtdVagasPreenchidas() {
@@ -41,7 +43,9 @@ public class Disciplina {
 	}
 
 	public void setQtdVagasPreenchidas(int qtdVagasPreenchidas) {
-		this.qtdVagasPreenchidas = qtdVagasPreenchidas;
+		if( qtdVagasPreenchidas >= 0 && qtdVagasPreenchidas <= qtdMaximaVagas) {
+			this.qtdVagasPreenchidas = qtdVagasPreenchidas;
+		}
 	}
 	
 	public void exibirInformacoes() {
