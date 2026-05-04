@@ -29,6 +29,7 @@ public class Pessoa {
     }
     
     public void imprimeDados() {
+    	System.out.println("=== PESSOA ===\n");
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
     }
