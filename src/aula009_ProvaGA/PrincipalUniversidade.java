@@ -2,7 +2,6 @@ package aula009_ProvaGA;
 
 import com.utils.Teclado;
 
-import aula007.Cliente;
 
 public class PrincipalUniversidade {
 
