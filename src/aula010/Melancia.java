@@ -36,13 +36,12 @@ public class Melancia extends Fruta{
 	}
 	
 	public double calculaPrecoFinal() {
-		double valorFinal = 0;
+		
 		if( isEhEpoca() == true) {
-			valorFinal = getPreco();
-			return valorFinal;
+			return calculaPreco(preco, peso);
 		}
 		else {
-			return getPreco() + precoAdicional;
+			return calculaPreco(preco, peso) + precoAdicional;
 		}
 	}
 	

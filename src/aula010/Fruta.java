@@ -49,8 +49,9 @@ public class Fruta {
     }
 
 	
-	public double calculaPreco(double imposto) {
-	     return preco + (preco * imposto);
+	public double calculaPreco(double preco, double peso) {
+		double precofinal = (preco * peso); 
+		return precofinal;
 	}
 	
 	
