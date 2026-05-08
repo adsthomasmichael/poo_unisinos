@@ -24,6 +24,7 @@ public class Programador extends Pessoa {
 		this.linguagem = linguagem;
 	}
 	
+	@Override
 	public void imprimeDados() {
 		System.out.println("=== PROGRAMADOR ===\n");
 		super.imprimeDados();

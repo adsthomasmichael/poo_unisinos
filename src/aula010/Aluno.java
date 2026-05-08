@@ -23,6 +23,7 @@ public class Aluno extends Pessoa {
 		this.nota = nota;
 	}
 	
+	@Override
 	public void imprimeDados() {
 		System.out.println("=== ALUNO ===\n");
 		super.imprimeDados();
