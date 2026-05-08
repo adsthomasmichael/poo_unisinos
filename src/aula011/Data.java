@@ -50,7 +50,7 @@ public class Data {
 	
 	public void imprimeData() {
 		System.out.println("=== DATA ===");
-		System.out.printf("%d/%d/%d", getDia(), getMes(), getAno());
+		System.out.printf("Data: %d/%d/%d", getDia(), getMes(), getAno());
 	}
 	
 
