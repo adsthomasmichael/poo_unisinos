@@ -11,6 +11,9 @@ public class InformacoesAtletas {
 		um Atleta a por parâmetro e imprime as informações dele.*/
 
 
+	public InformacoesAtletas(Atleta atleta) {
+	}
+
 	public void imprimeExclusivosAtleta( Atleta a) {
 		
 			if( a instanceof Nadador) {
