@@ -57,5 +57,30 @@ public class Biblioteca {
         }
         return null;
     }
+    // D - crie o metodo verificaDesconto, que recebe uma String titulo e retorna o valor do desconto do livro
+    // com o título solicitado caso o livro esteja na biblioteca ou retorna -1, caso contrário.
+    // Cuidado, nem todos os tipos de livro possuem desconto.
 
+    public double verificaDesconto(String titulo){
+        for (int i = 0; i < arrayLivro.length; i++){
+            if (arrayLivro[i] != null){
+                if (arrayLivro[i] instanceof Novo){
+                    Novo livroNovo = (Novo) arrayLivro[i];
+                    return livroNovo.getValorDesconto();
+                }
+            }
+        }
+        return -1;
+    }
+    // E - crie o metodo imprimeEdicoes, que imprime as edições de todos os livros que possuem esta informação.
+    public void imprimeEdicoes(){
+        for (int i = 0; i < arrayLivro.length; i++){
+            if (arrayLivro[i] != null){
+                if (arrayLivro[i] instanceof Antigo){
+                    Antigo livroAntigo = (Antigo) arrayLivro[i];
+                    livroAntigo.toString();
+                }
+            }
+        }
+    }
 }
