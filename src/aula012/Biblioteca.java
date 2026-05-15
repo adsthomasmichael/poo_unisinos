@@ -83,4 +83,19 @@ public class Biblioteca {
             }
         }
     }
+
+    // F - crie o metodo imprimeLivroPorAno, que simplesmente imprime as informações dos livros em ordem decrescente de ano de criação
+    public void imprimeLivroPorAno(){
+        for (int i = 0; i < arrayLivro.length; i++){
+            if (arrayLivro[i] != null){
+                if (arrayLivro[i].getAno() > arrayLivro[i + 1].getAno()){
+                    arrayLivro[i].toString();
+                }
+                else arrayLivro[i + 1].toString();
+            }
+        }
+    }
+
+
+
 }
