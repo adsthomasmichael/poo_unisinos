@@ -10,8 +10,8 @@ public class Antigo extends Livro{
         super();
     }
 
-    public Antigo(String titulo, String autor, double proce, int ano, int numEdicao) {
-        super(titulo, autor, proce, ano);
+    public Antigo(String titulo, String autor, double preco, int ano, int numEdicao) {
+        super(titulo, autor, preco, ano);
         this.numEdicao = numEdicao;
     }
 
@@ -26,12 +26,6 @@ public class Antigo extends Livro{
 
     @Override
     public String toString() {
-        return "Antigo{" +
-                "numEdicao=" + numEdicao +
-                ", titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", proce=" + proce +
-                ", ano=" + ano +
-                '}';
+        return super.toString() + ", numEdicao=" + numEdicao;
     }
 }

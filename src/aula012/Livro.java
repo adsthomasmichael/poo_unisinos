@@ -5,17 +5,17 @@ public class Livro {
 
     protected String titulo;
     protected String autor;
-    protected double proce;
+    protected double preco;
     protected int ano;
 
     //Construtores
     public Livro() {
     }
 
-    public Livro(String titulo, String autor, double proce, int ano) {
+    public Livro(String titulo, String autor, double preco, int ano) {
         this.titulo = titulo;
         this.autor = autor;
-        this.proce = proce;
+        this.preco = preco;
         this.ano = ano;
     }
 
@@ -36,12 +36,12 @@ public class Livro {
         this.autor = autor;
     }
 
-    public double getProce() {
-        return proce;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setProce(double proce) {
-        this.proce = proce;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     public int getAno() {
@@ -57,7 +57,7 @@ public class Livro {
         return "Livro{" +
                 "titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
-                ", proce=" + proce +
+                ", proce=" + preco +
                 ", ano=" + ano +
                 '}';
     }

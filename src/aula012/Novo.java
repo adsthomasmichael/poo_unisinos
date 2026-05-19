@@ -10,8 +10,8 @@ public class Novo extends Livro{
         super();
     }
 
-    public Novo(String titulo, String autor, double proce, int ano, double valorDesconto) {
-        super(titulo, autor, proce, ano);
+    public Novo(String titulo, String autor, double preco, int ano, double valorDesconto) {
+        super(titulo, autor, preco, ano);
         this.valorDesconto = valorDesconto;
     }
 
@@ -26,12 +26,6 @@ public class Novo extends Livro{
 
     @Override
     public String toString() {
-        return "Novo{" +
-                "valorDesconto=" + valorDesconto +
-                ", titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", proce=" + proce +
-                ", ano=" + ano +
-                '}';
+        return super.toString() + ", valorDesconto=" + valorDesconto;
     }
 }

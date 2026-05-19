@@ -78,23 +78,103 @@ public class Biblioteca {
             if (arrayLivro[i] != null){
                 if (arrayLivro[i] instanceof Antigo){
                     Antigo livroAntigo = (Antigo) arrayLivro[i];
-                    livroAntigo.toString();
+                    System.out.println(livroAntigo.getNumEdicao());
                 }
             }
         }
     }
 
     // F - crie o metodo imprimeLivroPorAno, que simplesmente imprime as informações dos livros em ordem decrescente de ano de criação
-    public void imprimeLivroPorAno(){
-        for (int i = 0; i < arrayLivro.length; i++){
-            if (arrayLivro[i] != null){
-                if (arrayLivro[i].getAno() > arrayLivro[i + 1].getAno()){
-                    arrayLivro[i].toString();
+    public void imprimeLivroPorAno() {
+        // Começa com o maior valor inteiro possível. Assim, na primeira rodada, qualquer ano de livro será menor que esse valor.
+        int ultimoAnoImpresso = Integer.MAX_VALUE;
+
+        // Repete até que não existam mais livros para imprimir.
+        while (true) {
+
+            // Variável que armazenará o livro mais recente encontrado na rodada atual.
+            Livro livroMaisRecente = null;
+
+            // Percorre todas as posições do array.
+            for (int i = 0; i < arrayLivro.length; i++) {
+
+                // Verifica se existe um livro nesta posição.
+                if (arrayLivro[i] != null) {
+
+                    // Obtém o ano do livro atual.
+                    int ano = arrayLivro[i].getAno();
+
+                    // Considera apenas livros com ano menor que o último já impresso. Isso evita imprimir o mesmo livro novamente.
+                    if (ano < ultimoAnoImpresso) {
+
+                        // Se ainda não existe um candidato, ou se o livro atual é mais recente que o candidato, ele passa a ser o novo candidato.
+                        if (livroMaisRecente == null ||
+                            ano > livroMaisRecente.getAno()) {
+
+                            livroMaisRecente = arrayLivro[i];
+                        }
+                    }
                 }
-                else arrayLivro[i + 1].toString();
             }
+
+            // Se nenhum livro foi encontrado nesta rodada, significa que todos já foram impressos.
+            if (livroMaisRecente == null) {
+                break; // encerra o while
+            }
+
+            // Imprime o livro mais recente encontrado.
+            System.out.println(livroMaisRecente);
+
+            // Atualiza o ano limite. Na próxima rodada, serão considerados apenas livros com ano menor que este.
+            ultimoAnoImpresso = livroMaisRecente.getAno();
         }
     }
+    
+    /*public void imprimeLivroPorAno() {
+        // Cria um novo array com o mesmo tamanho do array original. Esse array será usado para ordenar os livros sem alterar
+        // a ordem do arrayLivro da biblioteca.
+        Livro[] copia = new Livro[arrayLivro.length];
+
+        // Copia todos os elementos do array original para o array copia.
+        for (int i = 0; i < arrayLivro.length; i++) {
+            copia[i] = arrayLivro[i];
+        }
+
+        // Início do Bubble Sort. Esse laço controla quantas passadas serão feitas no array.
+        for (int i = 0; i < copia.length - 1; i++) {
+
+            // Percorre o array comparando elementos vizinhos. O "- i" evita comparar posições já organizadas.
+            for (int j = 0; j < copia.length - 1 - i; j++) {
+
+                // Só compara se ambas as posições contiverem livros.
+                if (copia[j] != null && copia[j + 1] != null) {
+
+                    // Se o livro da posição j for mais antigo que o da posição j+1, eles trocam de lugar.
+                    // Assim, os livros mais recentes "sobem" para o início do array.
+                    if (copia[j].getAno() < copia[j + 1].getAno()) {
+
+                        // Variável temporária para realizar a troca.
+                        Livro temp = copia[j];
+
+                        // Move o livro da posição j+1 para j.
+                        copia[j] = copia[j + 1];
+
+                        // Coloca o livro que estava em j na posição j+1.
+                        copia[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        // Percorre o array já ordenado.
+        for (int i = 0; i < copia.length; i++) {
+
+            // Imprime apenas as posições que contêm livros.
+            if (copia[i] != null) {
+                System.out.println(copia[i]);
+            }
+        }
+    } */
 
 
 
