@@ -198,6 +198,28 @@ public class Biblioteca {
     return somaPrecos / qtdLivros;    	
     
     }
+    
+    /* H - crie o método livroComMaiorTitulo, que retorna o livro com o maior título doarray. 
+     * Utilize o método length() da classe String, que retorna o tamanho do texto. 
+     * Por exemplo: variavelString.length() retorna o tamanho (ou seja, a quantidade de caracteres) da variável variavelString. */
+    
+    public Livro livroComMaiorTitulo() {
+    	
+    	int maiorTitulo = 0;
+    	Livro livroMaiorTitulo = null;
+    	
+    	for( int i = 0; i < arrayLivro.length; i++) {
+    		if( arrayLivro[i] != null) {
+    			if( arrayLivro[i].getTitulo().length() > maiorTitulo) {
+    				maiorTitulo = arrayLivro[i].getTitulo().length();
+    				livroMaiorTitulo = arrayLivro[i];
+    			}
+    			
+    		}
+    		
+    	}
+    	return livroMaiorTitulo;
+    }
 
 
 
