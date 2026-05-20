@@ -175,6 +175,29 @@ public class Biblioteca {
             }
         }
     } */
+    
+    // G - crie o método calculaMediaPreco, que retorna a média dos preços dos livros presentes no array
+    
+    public double calculaMediaPreco() {
+    
+    double mediaPrecos = 0;
+    int qtdLivros = 0;
+    
+    double somaPrecos = 0;
+    
+    	for (int i = 0; i < arrayLivro.length; i++) {
+    		if( arrayLivro[i] != null) {
+    			somaPrecos += arrayLivro[i].getPreco();
+    			qtdLivros++;
+    		}
+    	}
+    	
+    	if (qtdLivros == 0) {
+	        return 0;
+	    }
+    return somaPrecos / qtdLivros;    	
+    
+    }
 
 
 
