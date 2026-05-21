@@ -63,15 +63,17 @@ public class Biblioteca {
 
     public double verificaDesconto(String titulo){
         for (int i = 0; i < arrayLivro.length; i++){
-            if (arrayLivro[i] != null){
-                if (arrayLivro[i] instanceof Novo){
+            if (arrayLivro[i] != null &&
+            	arrayLivro[i].getTitulo().equals(titulo) &&
+            	arrayLivro[i] instanceof Novo){
                     Novo livroNovo = (Novo) arrayLivro[i];
                     return livroNovo.getValorDesconto();
                 }
             }
+        	return -1;
         }
-        return -1;
-    }
+        
+    
     // E - crie o metodo imprimeEdicoes, que imprime as edições de todos os livros que possuem esta informação.
     public void imprimeEdicoes(){
         for (int i = 0; i < arrayLivro.length; i++){

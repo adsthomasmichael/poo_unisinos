@@ -80,7 +80,22 @@ public class Principal {
 		}
 		
 		
-	
+	/* E - Solicite ao usuário (pelo teclado) que informe o título de um livro para verificar o desconto. 
+	 * Caso o livro exista e possua desconto, imprima as informações do livro. Caso contrário, imprima uma mensagem de erro. */
+
+		String tituloProcuraDesconto = Teclado.leString("Informe o Titulo do livro para verificar desconto: ");
+		Livro livroDesc = biblioteca01.procuraLivroPorTitulo(tituloProcuraDesconto);
+			if( livroDesc != null) {
+				if( biblioteca01.verificaDesconto(tituloProcuraDesconto) != -1) {
+					System.out.println(livroDesc);
+				}
+				else {
+					System.out.println("Este livro não possui desconto.");
+				}
+			}
+			else {
+				System.out.println("ERRO! Livro pesquisado não foi localizado.");
+			}
 	
 	
 	
