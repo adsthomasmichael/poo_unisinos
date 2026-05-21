@@ -98,7 +98,18 @@ public class Principal {
 			}
 	
 	
+	// F - Imprima a edição dos livros do tipo Antigo da biblioteca
+		biblioteca01.imprimeEdicoes();
+		
+	// G - Imprima as informações dos livros em ordem decrescente de ano de criação.
+		biblioteca01.imprimeLivroPorAno();
 	
+	// H - Imprima a média dos preços dos livros presentes na biblioteca.
+		System.out.printf("\nMédia de preços: R$ %.2f", biblioteca01.calculaMediaPreco());
+		
+	// I - Imprima as informações do livro com o maior título na biblioteca.
+		Livro livroMaiorTitulo = biblioteca01.livroComMaiorTitulo();
+		System.out.println(livroMaiorTitulo.toString());
 	}
 
 }
