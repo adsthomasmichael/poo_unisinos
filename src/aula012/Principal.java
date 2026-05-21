@@ -1,5 +1,7 @@
 package aula012;
 
+import com.utils.Teclado;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -64,6 +66,20 @@ public class Principal {
 		        System.out.println("Não foi possível inserir o livro.");
 		    }
 		}
+	
+	/* D - Solicite ao usuário (pelo teclado) que informe o título de um livro para procurar na biblioteca. Caso o livro exista, 
+	 * 		imprima as informações do livro. Caso contrário, imprima uma mensagem de erro. */
+	
+	String tituloProcurado = Teclado.leString("Informe o titulo do livro: ");
+	Livro livro = biblioteca01.procuraLivroPorTitulo(tituloProcurado);
+		if( livro != null) {
+			System.out.println(livro);
+		}
+		else {
+			System.out.println("ERRO! O livro pesquisado não foi localizado.");
+		}
+		
+		
 	
 	
 	
