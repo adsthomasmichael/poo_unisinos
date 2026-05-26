@@ -201,8 +201,8 @@ public class Biblioteca {
     
     }
     
-    /* H - crie o método livroComMaiorTitulo, que retorna o livro com o maior título doarray. 
-     * Utilize o método length() da classe String, que retorna o tamanho do texto. 
+    /* H - crie o metodo livroComMaiorTitulo, que retorna o livro com o maior título doarray.
+     * Utilize o metodo length() da classe String, que retorna o tamanho do texto.
      * Por exemplo: variavelString.length() retorna o tamanho (ou seja, a quantidade de caracteres) da variável variavelString. */
     
     public Livro livroComMaiorTitulo() {
