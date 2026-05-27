@@ -10,8 +10,8 @@ public class Federal extends Deputado{
         this.numCadastro = numCadastro;
     }
 
-    public Federal(String nome, double salarioBruto, double salarioLiquido, int qtdFuncionario, int numCadastro) {
-        super(nome, salarioBruto, salarioLiquido, qtdFuncionario);
+    public Federal(String nome, String partido, double salarioBruto, double salarioLiquido, int qtdFuncionario, int numCadastro) {
+        super(nome, partido, salarioBruto, salarioLiquido, qtdFuncionario);
         this.numCadastro = numCadastro;
     }
 

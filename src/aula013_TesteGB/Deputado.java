@@ -7,6 +7,7 @@ public class Deputado {
         acesso e um metodo construtor que recebe parâmetros para inicializar todos os atributos */
 
     protected String nome;
+    protected String partido;
     protected double salarioBruto;
     protected double salarioLiquido;
     Funcionario[] arrayFuncionarios;
@@ -14,8 +15,9 @@ public class Deputado {
     public Deputado() {
     }
 
-    public Deputado(String nome, double salarioBruto, double salarioLiquido, int qtdFuncionario) {
+    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, int qtdFuncionario) {
         this.nome = nome;
+        this.partido = partido;
         this.salarioBruto = salarioBruto;
         this.salarioLiquido = salarioLiquido;
         this.arrayFuncionarios = new Funcionario[qtdFuncionario];
@@ -27,6 +29,14 @@ public class Deputado {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getPartido() {
+        return partido;
+    }
+
+    public void setPartido(String partido) {
+        this.partido = partido;
     }
 
     public double getSalarioBruto() {

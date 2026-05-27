@@ -10,8 +10,8 @@ public class Estadual extends Deputado{
         this.estado = estado;
     }
 
-    public Estadual(String nome, double salarioBruto, double salarioLiquido, int qtdFuncionario, String estado) {
-        super(nome, salarioBruto, salarioLiquido, qtdFuncionario);
+    public Estadual(String nome, String partido, double salarioBruto, double salarioLiquido, int qtdFuncionario, String estado) {
+        super(nome, partido, salarioBruto, salarioLiquido, qtdFuncionario);
         this.estado = estado;
     }
 
