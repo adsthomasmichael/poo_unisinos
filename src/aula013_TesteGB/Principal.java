@@ -33,28 +33,28 @@ public class Principal {
             if (pc01.deputadosDesviamVerbas() != null ){
                 System.out.println("=== Desviam verbas ===");
                     if (deputados01[i] instanceof Federal){//se for Federal, imprimir o num Cadastro
-                        System.out.println(((Federal) deputados01[i]).getNumCadastro());
+                        System.out.println("Dep Federal: "+ ((Federal) deputados01[i]).getNome() + " - " +((Federal) deputados01[i]).getNumCadastro());
                     }
                     else if (deputados01[i] instanceof  Estadual) { //se for Estadual, imprimir o Estado
-                        System.out.println(((Estadual) deputados01[i]).getEstado());
+                        System.out.println("Dep Estadual: "+ ((Estadual) deputados01[i]).getNome()+ " - "+ ((Estadual) deputados01[i]).getEstado());
                     }
             }
             if (pc01.deputadosMaisFuncionarios() != null){
                 System.out.println("=== Excesso de funcionários ===");
                     if (deputados01[i] instanceof Federal){//se for Federal, imprimir o num Cadastro
-                        System.out.println("Deputado federal "+ ((Federal) deputados01[i]).getNumCadastro());
+                        System.out.println("Dep Federal: "+ ((Federal) deputados01[i]).getNome() + " - " +((Federal) deputados01[i]).getNumCadastro());
                     }
                     else if (deputados01[i] instanceof  Estadual) { //se for Estadual, imprimir o Estado
-                        System.out.println("Deputado estadual "+ ((Estadual) deputados01[i]).getEstado());
+                        System.out.println("Dep Estadual: "+ ((Estadual) deputados01[i]).getNome()+ " - "+ ((Estadual) deputados01[i]).getEstado());
                     }
             }
             if (pc01.deputadosRecebemValores() != null){
                 System.out.println("=== Recebem valores ===");
                     if (deputados01[i] instanceof Federal){//se for Federal, imprimir o num Cadastro
-                        System.out.println("Deputado federal "+ ((Federal) deputados01[i]).getNumCadastro());
+                        System.out.println("Dep Federal: "+ ((Federal) deputados01[i]).getNome() + " - " +((Federal) deputados01[i]).getNumCadastro());
                     }
                     else if (deputados01[i] instanceof  Estadual) { //se for Estadual, imprimir o Estado
-                        System.out.println("Deputado estadual "+ ((Estadual) deputados01[i]).getEstado());
+                        System.out.println("Dep Estadual: "+ ((Estadual) deputados01[i]).getNome()+ " - "+ ((Estadual) deputados01[i]).getEstado());
                     }
             }
 

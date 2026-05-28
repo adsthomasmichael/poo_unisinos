@@ -22,7 +22,7 @@ public class ProcuraCorruptos {
     /*  A - deputadosMaisFuncionarios, que retorna um array de Deputado que contém os
         deputados que possuem mais funcionários do que o estipulado. */
     public Deputado[] deputadosMaisFuncionarios(){
-        Deputado[] retornoArray = null;
+        Deputado[] retornoArray = new Deputado[arrayDeputados.length];
 
         for (int i = 0; i < arrayDeputados.length; i++){
             if (arrayDeputados[i] != null){
@@ -40,14 +40,21 @@ public class ProcuraCorruptos {
         funcionário devolve dinheiro de acordo com o salário líquido que ele recebe, que deveria ser
         sempre 70% do seu salário bruto. */
     public Deputado[] deputadosRecebemValores(){
-        Deputado[] retornoArray = null;
+        Deputado[] retornoArray = new Deputado[arrayDeputados.length];
 
         for (int i = 0; i < arrayDeputados.length; i++){
             if(arrayDeputados[i] != null){
-                boolean diferenca70 = arrayDeputados[i].arrayFuncionarios[i].salarioLiquido <
-                        (arrayDeputados[i].arrayFuncionarios[i].salarioBruto * 0.70);
-                if ( diferenca70){
-                    retornoArray[i] = arrayDeputados[i];
+                Funcionario[] funcionarios = arrayDeputados[i].getArrayFuncionarios();
+
+                for (int j = 0; j < funcionarios.length; j++){
+                    if (funcionarios[j] != null){
+                        double salarioCorreto = funcionarios[j].getSalarioBruto() *0.70;
+
+                        if (funcionarios[j].getSalarioLiquido() < salarioCorreto){
+                            retornoArray[i] = arrayDeputados[i];
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -59,11 +66,15 @@ public class ProcuraCorruptos {
         que deveria ser (80% do salário bruto).*/
 
     public Deputado[] deputadosDesviamVerbas(){
-        Deputado[] retornoArray = null;
+        Deputado[] retornoArray = new Deputado[arrayDeputados.length];
 
         for (int i = 0; i < arrayDeputados.length; i++){
-            if (arrayDeputados[i].salarioLiquido < (arrayDeputados[i].salarioBruto * 0.70)){
-                retornoArray[i] = arrayDeputados[i];
+            if ( arrayDeputados[i] != null){
+                double salarioCorreto = arrayDeputados[i].getSalarioBruto() *80;
+
+                if (arrayDeputados[i].getSalarioLiquido() > salarioCorreto){
+                    retornoArray[i] = arrayDeputados[i];
+                }
             }
         }
         return retornoArray;
