@@ -10,7 +10,7 @@ public class Deputado {
     protected String partido;
     protected double salarioBruto;
     protected double salarioLiquido;
-    Funcionario[] arrayFuncionarios;
+    protected Funcionario[] arrayFuncionarios;
 
     public Deputado() {
     }
