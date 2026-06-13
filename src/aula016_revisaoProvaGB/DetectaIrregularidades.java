@@ -9,8 +9,8 @@ public class DetectaIrregularidades {
 
     protected Hospital[] arrayHospital;
 
-    public DetectaIrregularidades(int qtdHospital) {
-        this.arrayHospital = new Hospital[qtdHospital];
+    public DetectaIrregularidades(Hospital[] arrayHospital) {
+        this.arrayHospital = arrayHospital;
     }
 
     public Hospital[] getArrayHospital() {

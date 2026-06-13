@@ -5,7 +5,7 @@ import com.utils.Teclado;
 public class Acervo {
 	private Livro livro;
 	private int qtdTotalLivros;
-	
+
 	public Acervo(Livro livro) {
 		this.livro = livro;
 		this.qtdTotalLivros = 0;
@@ -26,16 +26,17 @@ public class Acervo {
 	public void setQtdTotalLivros(int qtdTotalLivros) {
 		this.qtdTotalLivros = qtdTotalLivros;
 	}
-	
-	public Livro cadastrarLivro(Livro livro) {
+
+	/*public Livro cadastrarLivro(Livro livro) {
 		if( livro != null) {
 			System.out.println("Cadastro de novo livro realizado com sucesso.");
-			setQtdTotalLivros(+1);			
+			setQtdTotalLivros(+1);
 		}
 		else {
 			System.out.println();
 		}
-	}
+	} */
+
 	
 	
 	

@@ -1,3 +1,3 @@
-nome: Michael Thomas
-Disciplina: POO
-Nota: 8.4
+Nome: Thomas Michael
+Disciplina: POO - 2026/2
+Nota: 8.7

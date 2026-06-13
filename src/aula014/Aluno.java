@@ -3,7 +3,7 @@ package aula014;
 public class Aluno {
 
 	/* 	Crie a classe “Aluno” com os atributos do Exercício 1. Além dos métodos getters e
-		setters de cada atributo, crie o método “visualizar()”, que deverá mostrar na
+		setters de cada atributo, crie o metodo “visualizar()”, que deverá mostrar na
 		tela os nomes e valores dos atributos no mesmo formato do Exercício 2. Instancie
 		um aluno, defina seus atributos e visualize.*/
 	
