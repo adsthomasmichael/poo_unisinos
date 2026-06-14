@@ -54,6 +54,7 @@ public class DetectaIrregularidades {
                         double salarioCorreto = arrayFuncionarios[j].getSalarioBruto() *0.75; //variavel que calcula e recebe o valor correto do salario
                         if (salarioCorreto > arrayFuncionarios[j].getSalarioLiquido()){ // verifica se o salario está dentro da regra
                             retornoArrayDevolve[i] = arrayHospital[i];
+                            break;
                         }
                     }
 
@@ -74,7 +75,7 @@ public class DetectaIrregularidades {
         for (int i = 0; i < arrayHospital.length; i++){
             if (arrayHospital[i] != null){
                 double orcamentoOk = arrayHospital[i].getOrcamentoBruto() *0.85;
-                if (orcamentoOk > arrayHospital[i].getOrcamentoLiquido()){
+                if (orcamentoOk < arrayHospital[i].getOrcamentoLiquido()){
                     retornoArrayDesvio[i] = arrayHospital[i];
                 }
             }

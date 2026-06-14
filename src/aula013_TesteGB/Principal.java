@@ -25,6 +25,8 @@ public class Principal {
                 new Estadual("Dep10 ", partido, 21000, 16800, 32, "RJ")
         };
 
+
+
     /* B -  imprima o número de cadastro (se for Federal) ou o estado (se for Estadual) de
             todos os deputados corruptos, separados por tipo de corrupção (mais funcionários, que recebem
             valores ou desviam verbas). */
