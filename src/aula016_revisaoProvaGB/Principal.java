@@ -29,14 +29,14 @@ public class Principal {
 
                 };
 
-        for ( int i = 0; i < hospitales.length; i++){
-            Funcionario[] funcionario = hospitales[i].getArrayFuncionario();
+        for ( int i = 0; i < hospitales.length; i++){ //percorrer os hospitais
+            Funcionario[] funcionario = hospitales[i].getArrayFuncionario(); //criar array de funcionarios na posiçao i dos hospitais
 
             for (int j = 0; j < funcionario.length; j++){
-                double salarioBruto = Math.random()* 10000 + 2000;
-                double salarioLiquido = salarioBruto * (Math.random()* 0.6 + 0.4);
+                double salarioBruto = Math.random()* 10000 + 2000; //cria salario bruto aleatorio
+                double salarioLiquido = salarioBruto * (Math.random()* 0.6 + 0.4); //cria salario liquido aleatorio
 
-                funcionario[j] = new Funcionario(
+                funcionario[j] = new Funcionario( //cria novo funcionario na posição j do array de funcionarios
                         "Funcionario " + j,
                         salarioBruto,
                         salarioLiquido);
