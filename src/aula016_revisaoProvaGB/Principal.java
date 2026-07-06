@@ -1,7 +1,7 @@
 package aula016_revisaoProvaGB;
 
 public class Principal {
-    public static void main(String[] args){
+        public static void main(String[] args){
 
         /*  Crie uma classe chamada Principal, que possui o metodo main. Neste metodo, faça o que se pede:
             a- Crie um array de Hospital com 10 posições. Preencha o array com dados
