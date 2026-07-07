@@ -39,4 +39,70 @@ o metodo toString. */
                 ", arraySalaDeAula=" + Arrays.toString(arraySalaDeAula) +
                 '}';
     }
+
+    /* 3 - Na classe Universidade, crie um metodo insereSala, que insere uma sala recebida por
+    parâmetro no array (na primeira posição livre). O metodo deve retornar verdadeiro caso a sala seja
+    inserida ou falso caso contrário. */
+
+    public boolean insereSala(SalaDeAula salaDeAula){
+
+        for( int i = 0; i < arraySalaDeAula.length; i++) {
+            if (arraySalaDeAula[i] == null) {
+                arraySalaDeAula[i] = salaDeAula;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /* 4 - Na classe Universidade, crie um metodo chamado reservaSala, que recebe um inteiro
+        referente à quantidade de alunos desejada para a reserva. Este metodo retorna a sala reservada, ou
+        null caso não haja sala disponível que comporte uma turma do tamanho indicado. Não esqueça de
+        reservar a sala retornada em caso de sucesso na reserva. */
+
+        public SalaDeAula reservaSala(int qtdAlunos){
+            SalaDeAula salaDeAula = new SalaDeAula();
+            for (int i = 0; i < arraySalaDeAula.length; i++){
+                if (arraySalaDeAula[i] != null){
+                    if (arraySalaDeAula[i].getCapacidadeAlunos() >= qtdAlunos){
+                        salaDeAula = arraySalaDeAula[i];
+                        salaDeAula.setReservado(true);
+                        return salaDeAula;
+                    }
+                }
+            }
+            return null;
+        }
+
+    // 5 - Na classe Universidade, crie um mtodo chamado imprimeSalas, que imprime todas salas do array.
+
+    public void imprimeSalas(){
+        System.out.println("=== TODAS AS SALAS === ");
+            for (int i = 0; i < arraySalaDeAula.length; i++){
+                if (arraySalaDeAula[i] != null){
+                    System.out.println("Sala "+ arraySalaDeAula[i] + 1 +": \n");
+                    arraySalaDeAula[i].toString();
+                }
+            }
+    }
+
+    // 6 - Na classe Universidade, crie um metodo chamado imprimeSalasDisponiveis, que imprime as informações de todas as salas disponíveis para reserva.
+    public void imprimeSalasDisponiveis(){
+        //boolean disponivel = true;
+
+        System.out.println("=== SALAS DISPONIVEIS === ");
+
+        for (int i = 0; i < arraySalaDeAula.length;i++) {
+            if (arraySalaDeAula[i] != null) {
+                if (!arraySalaDeAula[i].isReservado()) {
+                    System.out.println("Sala " + arraySalaDeAula[i] + 1 + ": \n");
+                    arraySalaDeAula[i].toString();
+                }
+            }
+        }
+    }
+
+
+
+
 }

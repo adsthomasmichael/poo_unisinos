@@ -10,6 +10,15 @@ toString e crie os métodos de acesso dos atributos. */
     protected int capacidadeAlunos;
     protected boolean reservado;
 
+    public SalaDeAula() {
+    }
+
+    public SalaDeAula(String id, int capacidadeAlunos) {
+        this.id = id;
+        this.capacidadeAlunos = capacidadeAlunos;
+        this.reservado = false;
+    }
+
     public SalaDeAula(String id, int capacidadeAlunos, boolean reservado) {
         this.id = id;
         this.capacidadeAlunos = capacidadeAlunos;
