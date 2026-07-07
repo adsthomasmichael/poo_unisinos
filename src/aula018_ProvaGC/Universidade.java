@@ -102,7 +102,20 @@ o metodo toString. */
         }
     }
 
-
+// 8 - Na classe Universidade, crie um metodo chamado maiorSala, que retorna a maior sala disponível para reserva (com maior capacidade).
+public SalaDeAula maiorSala(){
+            int maior = 0;
+            SalaDeAula salaDeAula = new SalaDeAula();
+            for (int i = 0; i < arraySalaDeAula.length; i++) {
+                if (arraySalaDeAula[i] != null) {
+                    if (arraySalaDeAula[i].getCapacidadeAlunos() > maior) {
+                        maior = arraySalaDeAula[i].getCapacidadeAlunos();
+                        salaDeAula = arraySalaDeAula[i];
+                    }
+                }
+            }
+            return salaDeAula;
+}
 
 
 }
